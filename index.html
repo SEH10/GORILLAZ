@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GORILLAZ | La Realidad es un Mito</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de Iconos (Lucide Icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Fuentes Similares: Oswald (Heavy/Avenir Simil) y Merriweather (Subtitles/Minion Pro Simil) -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    
+    <!-- REFERENCIA AL ARCHIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Estilos de color y fuentes de Tailwind (para usar las variables definidas en style.css) -->
+    <style>
+        /* Tipografías: Oswald (Heavy/Avenir Simil) y Merriweather (Subtitles/Minion Pro Simil) */
+        .font-oswald { font-family: 'Oswald', sans-serif; }
+        .font-merriweather { font-family: 'Merriweather', serif; }
+        
+        /* Clases de Color Personalizadas (deben repetirse en el HTML para ser usadas por Tailwind) */
+        .bg-blackout { background-color: var(--color-blackout); }
+        .text-raw-paper { color: var(--color-raw-paper); }
+        .bg-demon-red { background-color: var(--color-demon-red); }
+        .border-demon-red { border-color: var(--color-demon-red); }
+        .text-murdoc-green { color: var(--color-murdoc-green); }
+        .text-plastic-blue { color: var(--color-plastic-blue); }
+    </style>
+</head>
+<body class="bg-blackout text-raw-paper font-merriweather leading-relaxed selection:bg-demon-red selection:text-raw-paper">
+
+    <!-- Fondo de Ruido Sutil (Clase definida en style.css) -->
+    <div class="background-noise"></div>
+
+    <!-- Barra de Navegación Fija Lateral (Estilo Índice/Portada de Revista) -->
+    <!-- Diseño responsivo: 'hidden md:flex' para ocultar en móvil -->
+    <nav id="sidebar" class="fixed left-0 top-0 h-full w-16 bg-blackout/90 backdrop-blur-sm shadow-xl hidden md:flex items-center justify-center z-50 p-2">
+        <ul class="space-y-8 flex flex-col items-center">
+            <li><a href="#hero" class="nav-link text-lg font-oswald tracking-widest text-demon-red hover:text-murdoc-green transform rotate-180">GZ</a></li>
+            <li><a href="#fase1" class="nav-link text-xs tracking-wider">FASE 1</a></li>
+            <li><a href="#fase2" class="nav-link text-xs tracking-wider">FASE 2</a></li>
+            <li><a href="#fase3" class="nav-link text-xs tracking-wider">FASE 3</a></li>
+            <li><a href="#integrantes" class="nav-link text-xs tracking-wider">BANDMATES</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenido Principal -->
+    <main class="md:ml-16">
+
+        <!-- SECCIÓN 1: PORTADA / INTRODUCCIÓN (HERO) -->
+        <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center text-center p-8 overflow-hidden">
+            <!-- Imagen de fondo de collage/sucio -->
+            <div class="absolute inset-0 z-0 opacity-15" style="background-image: url('https://placehold.co/1200x800/1F1D11/C02E30?text=GORILLAZ+COLLAGE+GRUNGE'); background-size: cover; background-position: center;"></div>
+            
+            <!-- Usando la clase personalizada 'broken-border' y clases Tailwind para el layout responsive -->
+            <div class="relative max-w-4xl mx-auto py-16 px-6 bg-blackout/80 rounded-xl shadow-2xl broken-border">
+                <!-- Título con la clase de animación añadida: animate-spin-subtle -->
+                <h1 class="text-7xl sm:text-9xl font-oswald text-demon-red grunge-title mb-4 animate-spin-subtle">
+                    GORILLAZ
+                </h1>
+                <p class="text-xl sm:text-3xl font-merriweather font-bold text-raw-paper mb-10 tracking-widest">
+                    LA REALIDAD ES UN MITO.
+                </p>
+                <div class="border-t-2 border-murdoc-green w-24 mx-auto mb-10"></div>
+                <p class="text-sm sm:text-base text-raw-paper/80 max-w-2xl mx-auto font-merriweather font-light">
+                    Gorillaz es la única respuesta lógica a la estupidez de la fama: cuatro figuras que solo existen para romperlo todo. Los antagonistas son reales, la música es la evidencia; es la única forma de sobrevivir al caos que los persigue. El truco no es el ego, es la fuerza bruta de sus miembros.
+                </p>
+                <a href="#fase1" class="mt-10 inline-flex items-center px-6 py-3 border-4 border-murdoc-green text-sm font-oswald tracking-widest uppercase text-murdoc-green hover:bg-murdoc-green hover:text-blackout transition duration-300 rounded-lg">
+                    <i data-lucide="chevrons-down" class="w-5 h-5 mr-2"></i>
+                    TRANSMISIÓN
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: FASE 1 - DEBUT GORILLAZ -->
+        <section id="fase1" class="py-20 px-4 sm:px-8 bg-raw-paper text-blackout">
+            <div class="max-w-6xl mx-auto broken-border p-6 bg-white/90 shadow-lg rounded-lg">
+                <!-- Uso de Flexbox ('flex', 'flex-col', 'md:flex-row') para layout de 2 columnas en MD y apilado en móvil -->
+                <div class="flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-10">
+                    <div class="w-full md:w-1/3">
+                        <span class="text-xs font-oswald uppercase tracking-widest text-murdoc-green">FASE 1</span>
+                        <h2 class="text-6xl font-oswald font-bold leading-none mb-4 text-demon-red grunge-title">
+                            DEBUT
+                            <br><span class="text-4xl text-blackout">GORILLAZ</span>
+                        </h2>
+                        <p class="text-sm font-merriweather font-light text-gray-700">
+                            El debut es la crónica del caos: una mezcla sucia de hip-hop, pop roto y punk de garaje. No había reglas, solo la necesidad urgente de sonar fuerte y diferente.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-2/3 border-l-4 border-plastic-blue pl-6 font-merriweather font-light">
+                        <p class="mb-4 text-gray-700">
+                            El universo no nació de una idea brillante, sino de una serie de accidentes brutales. La fundación se remonta a 1997, cuando el bajista, Murdoc Niccals, decidió que la música mainstream necesitaba un golpe de timón.
+                        </p>
+                        <p class="mb-4 text-gray-800 font-bold">
+                            Murdoc, recién salido de un mal trago (de nuevo), secuestra a un 2D recién chocado y saca a Russel del psiquiátrico. El plan: forzar un sonido que nadie más se atrevería a crear. El debut probó que la ficción podía ser más real que cualquier artista de carne y hueso.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-center">
+                    <img src="https://placehold.co/600x250/1F1D11/C02E30?text=2D+Y+MURDOC+POSTER+FASE+1" alt="Ilustración de 2D y Murdoc en la Fase 1" class="w-full max-w-xl character-image border-4 border-murdoc-green p-2 rounded-lg" style="filter: drop-shadow(4px 4px 0px var(--color-demon-red));">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: FASE 2 - DEMON DAYS -->
+        <section id="fase2" class="py-20 px-4 sm:px-8 bg-blackout/95 text-raw-paper">
+            <div class="max-w-6xl mx-auto broken-border p-6 shadow-lg rounded-lg border-murdoc-green">
+                <div class="text-center mb-12">
+                    <span class="text-xs font-oswald uppercase tracking-widest text-murdoc-green">FASE 2</span>
+                    <h2 class="text-7xl font-oswald font-bold leading-none mb-4 text-raw-paper grunge-title" style="text-shadow: 2px 2px 0px var(--color-demon-red);">
+                        DEMON DAYS
+                    </h2>
+                    <p class="text-xl font-merriweather font-bold text-demon-red tracking-wider">
+                        Si el debut fue el caos, Demon Days fue el apocalipsis.
+                    </p>
+                </div>
+
+                <!-- Uso de Flexbox para layout de 2 columnas en MD y apilado en móvil -->
+                <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-10 font-merriweather font-light">
+                    <div class="w-full md:w-1/2">
+                        <p class="mb-4 text-raw-paper/90">
+                            Tras el frenesí de su primer éxito, la banda se dispersó. Murdoc fue encarcelado, Russel estaba en shock, y Kong Studios fue invadido por zombis (literalmente). La factura metafórica del exceso había llegado.
+                        </p>
+                        <p class="mb-4 text-raw-paper font-bold text-murdoc-green">
+                            Este exilio forzado alimentó un álbum más conceptual, político y oscuro. Noodle, la única con la cabeza clara, se convirtió en la principal fuerza creativa.
+                        </p>
+                        <p class="text-sm text-raw-paper/70 italic">
+                            De esta oscuridad nacieron himnos definitivos como "Feel Good Inc." y "Dare".
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <img src="https://placehold.co/600x400/C02E30/27AE60?text=PERSONAJES+DEMON+DAYS" alt="Ilustración de los personajes de Demon Days" class="character-image border-4 border-murdoc-green p-2 rounded-lg" style="filter: drop-shadow(4px 4px 0px var(--color-murdoc-green));">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: FASE 3 - PLASTIC BEACH -->
+        <section id="fase3" class="py-20 px-4 sm:px-8 bg-raw-paper text-blackout">
+            <div class="max-w-6xl mx-auto broken-border p-6 bg-white/90 shadow-lg rounded-lg border-murdoc-green">
+                <!-- Uso de Flexbox para layout de 2 columnas en MD y apilado en móvil -->
+                <div class="flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-10">
+                    <div class="w-full md:w-2/3 border-r-4 border-murdoc-green pr-6 font-merriweather font-light">
+                        <span class="text-xs font-oswald uppercase tracking-widest text-plastic-blue">FASE 3</span>
+                        <h2 class="text-7xl font-oswald font-bold leading-none mb-4 text-demon-red grunge-title">
+                            PLASTIC
+                            <br><span class="text-4xl text-blackout">BEACH</span>
+                        </h2>
+                        <p class="mb-4 text-gray-700">
+                            Fase 3: Una épica sobre la polución, la soledad y la decadencia futurista. Es la banda sonora perfecta para el fin.
+                        </p>
+                        <p class="mb-4 text-gray-800 font-bold text-plastic-blue">
+                            Murdoc, huyendo del Diablo, secuestró a 2D y reemplazó a Noodle con un cyborg-clon. Plastic Beach es una fortaleza hecha de basura en medio del océano.
+                        </p>
+                        <p class="text-sm text-gray-600 italic">
+                            Probó que Gorillaz, incluso fracturado y rodeado de basura, puede crear una obra maestra que refleja la crisis ambiental.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <img src="https://placehold.co/400x350/0084a8/FFFFFF?text=PLASTIC+BEACH+BOAT" alt="Ilustración del bote de Plastic Beach o Noodle Cyborg" class="character-image border-4 border-murdoc-green p-2 rounded-lg" style="filter: drop-shadow(4px 4px 0px var(--color-plastic-blue));">
+                        <p class="text-xs mt-2 text-center text-gray-500 font-merriweather">
+                            La fase culmina en una batalla naval épica.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: INTEGRANTES (BANDMATES) -->
+        <section id="integrantes" class="py-20 px-4 sm:px-8 bg-blackout/95 text-raw-paper">
+            <div class="max-w-6xl mx-auto broken-border p-6 border-murdoc-green">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-oswald font-bold text-murdoc-green grunge-title">
+                        BANDMATES
+                    </h2>
+                    <p class="text-xl font-merriweather font-bold mt-2 text-demon-red">
+                        El motor que lleva el peso de todo el groove encima.
+                    </p>
+                </div>
+                
+                <!-- Uso de Grid ('grid', 'lg:grid-cols-4') para las 4 columnas de tarjetas, totalmente responsivo -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- MURDOC NICCALS -->
+                    <div class="bg-blackout/70 p-4 border-4 border-plastic-blue shadow-md rounded-lg">
+                        <h3 class="text-3xl font-oswald text-murdoc-green mb-2 grunge-title">MURDOC</h3>
+                        <p class="text-xs uppercase tracking-widest mb-4 font-oswald text-demon-red">En el Bajo</p>
+                        <img src="https://placehold.co/300x400/1F1D11/27AE60?text=MURDOC+NICCALS" alt="Ilustración de Murdoc Niccals" class="character-image mb-4 w-full h-auto rounded-lg" style="filter: drop-shadow(4px 4px 0px var(--color-murdoc-green));">
+                        <p class="text-sm text-raw-paper/90 font-merriweather font-light">
+                            El bajista satánico, convicto y líder de la banda. Es el catalizador del caos que lo enciende todo. Su bajo es el ancla grunge del sonido.
+                        </p>
+                    </div>
+
+                    <!-- 2D -->
+                    <div class="bg-blackout/70 p-4 border-4 border-plastic-blue shadow-md rounded-lg">
+                        <h3 class="text-3xl font-oswald text-demon-red mb-2 grunge-title">2D</h3>
+                        <p class="text-xs uppercase tracking-widest mb-4 font-oswald text-murdoc-green">Voz y Teclado</p>
+                        <img src="https://placehold.co/300x400/1F1D11/C02E30?text=2D" alt="Ilustración de 2D" class="character-image mb-4 w-full h-auto rounded-lg" style="filter: drop-shadow(4px 4px 0px var(--color-demon-red));">
+                        <p class="text-sm text-raw-paper/90 font-merriweather font-light">
+                            El vocalista. Sus icónicos ojos negros son resultado de accidentes. Es el contrapeso melódico y la única fuente de paz. Melodía pura nacida de la catástrofe.
+                        </p>
+                    </div>
+
+                    <!-- NOODLE -->
+                    <div class="bg-blackout/70 p-4 border-4 border-plastic-blue shadow-md rounded-lg">
+                        <h3 class="text-3xl font-oswald text-plastic-blue mb-2 grunge-title">NOODLE</h3>
+                        <p class="text-xs uppercase tracking-widest mb-4 font-oswald text-demon-red">En la Guitarra</p>
+                        <img src="https://placehold.co/300x400/1F1D11/0084a8?text=NOODLE" alt="Ilustración de Noodle" class="character-image mb-4 w-full h-auto rounded-lg" style="filter: drop-shadow(4px 4px 0px var(--color-plastic-blue));">
+                        <p class="text-sm text-raw-paper/90 font-merriweather font-light">
+                            Llegó desde Japón en una caja a los 10 años. Es la guitarrista y la verdadera fuerza creativa. SU FUNCIÓN: Visión y Disciplina.
+                        </p>
+                    </div>
+
+                    <!-- RUSSEL HOBBS -->
+                    <div class="bg-blackout/70 p-4 border-4 border-plastic-blue shadow-md rounded-lg">
+                        <h3 class="text-3xl font-oswald text-murdoc-green mb-2 grunge-title">RUSSEL</h3>
+                        <p class="text-xs uppercase tracking-widest mb-4 font-oswald text-demon-red">En la Batería</p>
+                        <img src="https://placehold.co/300x400/1F1D11/27AE60?text=RUSSEL+HOBBS" alt="Ilustración de Russel Hobbs" class="character-image mb-4 w-full h-auto rounded-lg" style="filter: drop-shadow(4px 4px 0px var(--color-murdoc-green));">
+                        <p class="text-sm text-raw-paper/90 font-merriweather font-light">
+                            El groove y alma rítmica. Poseído por espíritus de raperos fallecidos que habitan en sus ritmos. Es el más sabio y el pilar rítmico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: DETRÁS DEL CAOS (GENIOS) -->
+        <section id="genios" class="py-20 px-4 sm:px-8 bg-raw-paper text-blackout">
+            <div class="max-w-6xl mx-auto broken-border p-6 bg-white/90 shadow-lg rounded-lg border-murdoc-green">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-oswald font-bold text-demon-red grunge-title">
+                        DETRÁS DEL CAOS
+                    </h2>
+                </div>
+
+                <!-- Uso de Flexbox para layout de 2 columnas en LG y apilado en móvil -->
+                <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-10 font-merriweather font-light">
+                    
+                    <!-- JAMIE HEWLETT -->
+                    <div class="lg:w-1/2 p-4 border-4 border-demon-red/50 bg-raw-paper shadow-md rounded-lg">
+                        <h3 class="text-4xl font-oswald font-bold mb-2 text-plastic-blue">JAMIE HEWLETT</h3>
+                        <p class="text-xs uppercase tracking-widest mb-4 font-oswald text-murdoc-green">El Motor Estético</p>
+                        <p class="mb-4 text-gray-700">
+                            Es responsable del diseño de los Bandmates. Su arte, inicialmente grunge y sucio, ha evolucionado a través de las fases de la banda.
+                        </p>
+                        <p class="text-sm font-bold text-gray-800">
+                            Es el artista que documenta el caos, creando un universo tan creíble que superó a sus contrapartes humanas, manteniendo una cualidad cruda y subversiva.
+                        </p>
+                    </div>
+
+                    <!-- DAMON ALBARN -->
+                    <div class="lg:w-1/2 p-4 border-4 border-demon-red/50 bg-raw-paper shadow-md rounded-lg">
+                        <h3 class="text-4xl font-oswald font-bold mb-2 text-murdoc-green">DAMON ALBARN</h3>
+                        <p class="text-xs uppercase tracking-widest mb-4 font-oswald text-plastic-blue">El Genio Musical</p>
+                        <p class="mb-4 text-gray-700">
+                            Albarn (líder de Blur) es quien compone, produce y da voz a 2D y a gran parte del universo musical.
+                        </p>
+                        <p class="text-sm font-bold text-gray-800">
+                            Su genialidad reside en su capacidad para mezclar géneros con una melancolía pop inconfundible. Liberado de su propia fama para hacer música sin límites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-demon-red text-blackout p-6 text-center">
+            <p class="text-sm font-oswald tracking-widest">
+                GORILLAZ © 2025. TRANSMISIÓN FINALIZADA.
+            </p>
+            <p class="text-xs font-merriweather mt-1">
+                Proyecto de maquetación basado en la estética de Jamie Hewlett y Damon Albarn.
+            </p>
+        </footer>
+
+    </main>
+    
+    <!-- Script para inicializar Lucide icons y manejar el scroll (JavaScript) -->
+    <script>
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('#sidebar a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - (window.innerHeight / 10),
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
